@@ -2,7 +2,7 @@
 
 public class SummationSeries implements ISubscriber {
     
-    public void operate(int input){
+    public void operate(double input){
     double result = 0; 
     for (int i=0;i<input ;i++){
     result+=i;
@@ -11,7 +11,7 @@ public class SummationSeries implements ISubscriber {
     }
 
    
-    public void notifySubscriber(int input) {
+    public void notifySubscriber(double input) {
        operate(input);
     }
 

@@ -8,7 +8,8 @@ public class Main {
 			new CircleArea(),
 			new twoPowerN(),
 			new CircleCircummatance(),
-      new SummationSeries()
+      new SummationSeries(),
+      new multiplicationSeries()
 
 	};
 	public static void main(String[] args) {

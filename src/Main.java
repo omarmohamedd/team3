@@ -5,7 +5,7 @@ which it's notifysubscriber method takes it's calles it's thread() which calls i
 public class Main {
 	//add your object of class in the array below
 	private static ISubscriber subscribers [] = {
-			new Circle(),//needs editing before program could start
+			new CircleArea(),
 			new twoPowerN(),
 			new CircleCircummatance(),
       new SummationSeries()

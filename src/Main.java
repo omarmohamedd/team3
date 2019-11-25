@@ -1,13 +1,12 @@
 import java.util.Scanner;
-/*Implementors of circleCir and CircleVol should 
- * add their methods to cirlce class and class it
- * in notify subscriber class,the rest should implement 
- * their methods in their special classes
+/*add your class that implements ISubscriber and extends thread
+which it's notifysubscriber method takes it's calles it's thread() which calls it's purpose function
  */
 public class Main {
 	//add your object of class in the array below
 	private static ISubscriber subscribers [] = {
-			new Circle()
+			new Circle(),//needs editing before program could start
+			new twoPowerN()
 	};
 	public static void main(String[] args) {
 		Topic mathTopic = new Topic();
@@ -16,6 +15,7 @@ public class Main {
 		}
 		Scanner sc = new Scanner(System.in);
 		double input = sc.nextDouble();
-		mathTopic.dispatchEvent(input);
+		mathTopic.setValue(input);
+		mathTopic.dispatchEvent();
 	}
 }

@@ -7,7 +7,9 @@ public class Main {
 	private static ISubscriber subscribers [] = {
 			new Circle(),//needs editing before program could start
 			new twoPowerN(),
-			new CircleCircummatance()
+			new CircleCircummatance(),
+      new SummationSeries()
+
 	};
 	public static void main(String[] args) {
 		Topic mathTopic = new Topic();

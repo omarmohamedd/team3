@@ -7,7 +7,7 @@ public class SummationSeries extends Thread implements ISubscriber {
     private int input;
 
     public void operate(){
-    double result = 0;
+    int result = 0;
     for (int i=0;i<input;i++){
     result+=i;
     }

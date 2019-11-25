@@ -1,7 +1,7 @@
 
-public class multiplicationSeries implements ISubscriber{
-
-	public void multiplicationseries(int n) {
+public class multiplicationSeries extends Thread implements ISubscriber{
+    private int n;
+	public void multiplicationseries() {
 		 int i,fact=1;    
 		  for(i=1;i<=n;i++){    
 		      fact=fact*i;    
@@ -9,8 +9,13 @@ public class multiplicationSeries implements ISubscriber{
 		  System.out.println("fact of "+n+" is"+fact);
 	}
 	
-	public void notifySubscriber(double input) {
+	public void notifySubscriber(Topic topic) {
+	        n=(int)topic.getValue();
+	        this.start();
 		
-		multiplicationseries((int)input);
+	}
+	
+	public void run() {
+		multiplicationseries();
 	}
 }

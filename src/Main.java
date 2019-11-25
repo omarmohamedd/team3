@@ -9,7 +9,9 @@ public class Main {
 			new twoPowerN(),
 			new CircleCircummatance(),
       new SummationSeries(),
+      new Fibonacci(),
       new multiplicationSeries()
+
 
 	};
 	public static void main(String[] args) {

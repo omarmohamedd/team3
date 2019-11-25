@@ -1,19 +1,31 @@
 
 
-public class SummationSeries implements ISubscriber {
-    
-    public void operate(double input){
-    double result = 0; 
-    for (int i=0;i<input ;i++){
+
+
+
+public class SummationSeries extends Thread implements ISubscriber {
+    private int input;
+
+    public void operate(){
+    double result = 0;
+    for (int i=0;i<input;i++){
     result+=i;
     }
-    System.out.println(" The resullt of summation series is : "+ result);
+    System.out.println("The resullt of summation series is : " + result);
     }
 
-   
-    public void notifySubscriber(double input) {
-       operate(input);
+
+public void run(){
+operate();
+}
+    @Override
+    public void notifySubscriber(Topic topic) {
+        input=(int)topic.getValue();
+        this.start();
     }
 
-   
+
+
+
+
 }

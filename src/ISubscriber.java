@@ -1,4 +1,4 @@
 
 public interface ISubscriber {
-	public abstract void notifySubscriber(double input);
+	public abstract void notifySubscriber(Topic topic);
 }

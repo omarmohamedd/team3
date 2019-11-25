@@ -6,7 +6,8 @@ public class Main {
 	//add your object of class in the array below
 	private static ISubscriber subscribers [] = {
 			new Circle(),//needs editing before program could start
-			new twoPowerN()
+			new twoPowerN(),
+			new CircleCircummatance()
 	};
 	public static void main(String[] args) {
 		Topic mathTopic = new Topic();

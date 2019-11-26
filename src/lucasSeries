@@ -19,7 +19,7 @@ public void run(){
      system.out.println("lucas "+ lucas(n));
 }
     public void notifySubscriber(Topic topic){ 
-        input=(int)topic.getvalue();
+        n=(int)topic.getvalue();
         this.start();
     }
 

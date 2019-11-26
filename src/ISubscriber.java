@@ -1,7 +1,8 @@
 
 public abstract class lucasSeries extends Thread implements ISubscriber{
-
-    int lucas(int n) 
+    
+ private int n;
+    public int cas() 
     { 
 
         if (n == 0) 
@@ -10,11 +11,18 @@ public abstract class lucasSeries extends Thread implements ISubscriber{
             return 1; 
 
 
-        return lucas(n - 1) +
-               lucas(n - 2); 
+        return lucas(n - 1)  + lucas(n - 2); 
+        system.out.println("lucas "+ lucas(input));
+        
     }
 
-
+public void run(){ 
+    lucas();
+}
+    public void notifySubscriber(Topic topic){ 
+        input=(int)topic.getvalue();
+        this.start();
+    }
 
 
 }

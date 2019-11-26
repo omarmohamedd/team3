@@ -1,4 +1,20 @@
 
-public interface ISubscriber {
-	public abstract void notifySubscriber(Topic topic);
+public abstract class lucasSeries extends Thread implements ISubscriber{
+
+    int lucas(int n) 
+    { 
+
+        if (n == 0) 
+            return 2; 
+        if (n == 1) 
+            return 1; 
+
+
+        return lucas(n - 1) +
+               lucas(n - 2); 
+    }
+
+
+
+
 }
